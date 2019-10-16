@@ -2,24 +2,24 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2019-10-16T21:56:03.653Z",
-    "end": "2019-10-16T21:56:07.774Z",
-    "duration": 4121,
+    "failures": 0,
+    "start": "2019-10-16T22:03:43.753Z",
+    "end": "2019-10-16T22:03:50.527Z",
+    "duration": 6774,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "passPercentClass": "danger",
+    "passPercentClass": "success",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "9fad676b-76aa-48f0-829e-e030b3ac7a63",
+    "uuid": "c6de5ed9-17c3-416d-811a-c0e8a1ca671d",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "1e8cf1a1-bf9c-4f00-9ffb-28fd5f08c294",
+        "uuid": "18c9d595-c012-4c6b-83cd-37b6ea8c2687",
         "title": "Google search automated testing",
         "fullFile": "/Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/test/homePage.test.js",
         "file": "/test/homePage.test.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Google search automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 2309,
+            "duration": 2810,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
             "err": {},
             "isRoot": false,
-            "uuid": "e86bf114-4b9b-4215-af8b-2cc7754c32d9",
+            "uuid": "448602a7-c6ff-41f4-8648-bcf0a17ec0bc",
             "isHook": true,
             "skipped": false
           }
@@ -54,14 +54,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "Google search automated testing \"after each\" hook",
             "timedOut": false,
-            "duration": 52,
+            "duration": 51,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "935cee1f-f026-4686-a8ac-4cf93cdc2e2d",
+            "uuid": "70c67a28-5748-4896-be15-230a6f4c5658",
             "isHook": true,
             "skipped": false
           }
@@ -71,7 +71,7 @@
             "title": "find the input box and google search button",
             "fullTitle": "Google search automated testing find the input box and google search button",
             "timedOut": false,
-            "duration": 60,
+            "duration": 50,
             "state": "passed",
             "speed": "medium",
             "pass": true,
@@ -80,7 +80,7 @@
             "code": "const result = await page.findInputAndButton();\n// console.log(\"result is...\", result);\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
             "err": {},
             "isRoot": false,
-            "uuid": "e265a298-0d49-4d43-88ab-d5bc2bed31aa",
+            "uuid": "5bab9f77-adb6-4884-8873-0e48d6038ead",
             "isHook": false,
             "skipped": false
           },
@@ -88,32 +88,29 @@
             "title": "put keyword in search box and click search button",
             "fullTitle": "Google search automated testing put keyword in search box and click search button",
             "timedOut": false,
-            "duration": 138,
-            "state": "failed",
-            "pass": false,
-            "fail": true,
+            "duration": 2409,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
             "pending": false,
             "code": "const result = await page.submitKeywordAndGetResult();\nconsole.log(\"result is...\", result);\nexpect(result.length).to.be.above(10);",
-            "err": {
-              "message": "WebDriverError: element not visible\n  (Session info: chrome=77.0.3865.120)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)",
-              "estack": "WebDriverError: element not visible\n  (Session info: chrome=77.0.3865.120)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)\n    at Object.checkLegacyResponse (node_modules/selenium-webdriver/lib/error.js:585:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:533:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:468:26)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
-            },
+            "err": {},
             "isRoot": false,
-            "uuid": "9bd83775-61e0-45a2-b84f-0679c2867f80",
+            "uuid": "c6cb40c7-6fa6-4e0c-8b14-50c97a3aad55",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "e265a298-0d49-4d43-88ab-d5bc2bed31aa"
+          "5bab9f77-adb6-4884-8873-0e48d6038ead",
+          "c6cb40c7-6fa6-4e0c-8b14-50c97a3aad55"
         ],
-        "failures": [
-          "9bd83775-61e0-45a2-b84f-0679c2867f80"
-        ],
+        "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 198,
+        "duration": 2459,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000
