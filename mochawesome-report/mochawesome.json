@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2019-07-09T19:45:09.023Z",
-    "end": "2019-07-09T19:45:45.568Z",
-    "duration": 36545,
+    "start": "2019-10-15T23:57:02.866Z",
+    "end": "2019-10-15T23:57:39.443Z",
+    "duration": 36577,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "cd91e56a-68ad-44f2-80df-fa4030d7a8bd",
+    "uuid": "58115aa2-ef8f-4f16-a4e0-a6875cfd52d0",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,23 +28,23 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "1748ec64-d592-4484-ab9e-e81d7c576fd4",
+        "uuid": "88978c80-3c70-4e1a-9f2e-62ab93cf849f",
         "title": "Google search automated testing",
-        "fullFile": "/home/nahid/Node/Automation-With-Selenium-And-Node.js/test/homePage.test.js",
+        "fullFile": "/Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/test/homePage.test.js",
         "file": "/test/homePage.test.js",
         "beforeHooks": [
           {
             "title": "\"before each\" hook",
             "fullTitle": "Google search automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 3407,
+            "duration": 3103,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
             "err": {},
             "isRoot": false,
-            "uuid": "8944f123-6bd9-4188-8de1-4612a668f003",
+            "uuid": "cb59e210-4953-4adc-b61c-bb8f54196b9f",
             "isHook": true,
             "skipped": false
           }
@@ -54,14 +54,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "Google search automated testing \"after each\" hook",
             "timedOut": false,
-            "duration": 73,
+            "duration": 52,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "4d5641da-9f03-4740-8140-6204b3c165b7",
+            "uuid": "2ebddb08-df7d-4ef9-8bf2-15f2e8d5404e",
             "isHook": true,
             "skipped": false
           }
@@ -71,18 +71,18 @@
             "title": "find the input box and google search button",
             "fullTitle": "Google search automated testing find the input box and google search button",
             "timedOut": false,
-            "duration": 15006,
+            "duration": 15022,
             "state": "failed",
             "pass": false,
             "fail": true,
             "pending": false,
             "code": "const result = await page.findInputAndButton();\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
             "err": {
-              "message": "TimeoutError: Looking for element\nWait timed out after 15003ms",
-              "estack": "TimeoutError: Looking for element\nWait timed out after 15003ms\n    at /home/nahid/Node/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)"
+              "message": "TimeoutError: Looking for element by NAME\nWait timed out after 15002ms",
+              "estack": "TimeoutError: Looking for element by NAME\nWait timed out after 15002ms\n    at /Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
             },
             "isRoot": false,
-            "uuid": "1e31ed89-df08-4b2e-8d7b-ea78bc6f1f1c",
+            "uuid": "ec8d9e41-3e92-47b0-b008-081594ef6c44",
             "isHook": false,
             "skipped": false
           },
@@ -90,18 +90,18 @@
             "title": "put keyword in search box and click search button",
             "fullTitle": "Google search automated testing put keyword in search box and click search button",
             "timedOut": false,
-            "duration": 15010,
+            "duration": 15021,
             "state": "failed",
             "pass": false,
             "fail": true,
             "pending": false,
             "code": "const result = await page.submitKeywordAndGetResult();\nexpect(result.length).to.be.above(10);",
             "err": {
-              "message": "TimeoutError: Looking for element\nWait timed out after 15010ms",
-              "estack": "TimeoutError: Looking for element\nWait timed out after 15010ms\n    at /home/nahid/Node/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)"
+              "message": "TimeoutError: Looking for element by NAME\nWait timed out after 15004ms",
+              "estack": "TimeoutError: Looking for element by NAME\nWait timed out after 15004ms\n    at /Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
             },
             "isRoot": false,
-            "uuid": "47e01e4d-1465-400b-9044-4c958b85ad55",
+            "uuid": "01488660-4ae5-4015-aac4-6cacdc17d89c",
             "isHook": false,
             "skipped": false
           }
@@ -109,12 +109,12 @@
         "suites": [],
         "passes": [],
         "failures": [
-          "1e31ed89-df08-4b2e-8d7b-ea78bc6f1f1c",
-          "47e01e4d-1465-400b-9044-4c958b85ad55"
+          "ec8d9e41-3e92-47b0-b008-081594ef6c44",
+          "01488660-4ae5-4015-aac4-6cacdc17d89c"
         ],
         "pending": [],
         "skipped": [],
-        "duration": 30016,
+        "duration": 30043,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000

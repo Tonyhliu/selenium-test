@@ -1,5 +1,7 @@
 module.exports = {
-    searchInputSelectorId: 'lst-ib',
-    searchButtonSelectorName: 'btnK',
+    searchInputSelectorClassName: 'gLFyf gsfi',
+    // searchInputSelectorId: 'lst-ib',
+    searchButtonSelectorName: 'gNO89b',
+    // searchButtonSelectorName: 'btnK',
     resultConfirmationId: 'resultStats'
 };
