@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 2,
-    "start": "2019-10-15T23:57:02.866Z",
-    "end": "2019-10-15T23:57:39.443Z",
-    "duration": 36577,
+    "failures": 1,
+    "start": "2019-10-16T21:56:03.653Z",
+    "end": "2019-10-16T21:56:07.774Z",
+    "duration": 4121,
     "testsRegistered": 2,
-    "passPercent": 0,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "58115aa2-ef8f-4f16-a4e0-a6875cfd52d0",
+    "uuid": "9fad676b-76aa-48f0-829e-e030b3ac7a63",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "88978c80-3c70-4e1a-9f2e-62ab93cf849f",
+        "uuid": "1e8cf1a1-bf9c-4f00-9ffb-28fd5f08c294",
         "title": "Google search automated testing",
         "fullFile": "/Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/test/homePage.test.js",
         "file": "/test/homePage.test.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Google search automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 3103,
+            "duration": 2309,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
             "err": {},
             "isRoot": false,
-            "uuid": "cb59e210-4953-4adc-b61c-bb8f54196b9f",
+            "uuid": "e86bf114-4b9b-4215-af8b-2cc7754c32d9",
             "isHook": true,
             "skipped": false
           }
@@ -61,7 +61,7 @@
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "2ebddb08-df7d-4ef9-8bf2-15f2e8d5404e",
+            "uuid": "935cee1f-f026-4686-a8ac-4cf93cdc2e2d",
             "isHook": true,
             "skipped": false
           }
@@ -71,18 +71,16 @@
             "title": "find the input box and google search button",
             "fullTitle": "Google search automated testing find the input box and google search button",
             "timedOut": false,
-            "duration": 15022,
-            "state": "failed",
-            "pass": false,
-            "fail": true,
+            "duration": 60,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
             "pending": false,
-            "code": "const result = await page.findInputAndButton();\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
-            "err": {
-              "message": "TimeoutError: Looking for element by NAME\nWait timed out after 15002ms",
-              "estack": "TimeoutError: Looking for element by NAME\nWait timed out after 15002ms\n    at /Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
-            },
+            "code": "const result = await page.findInputAndButton();\n// console.log(\"result is...\", result);\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
+            "err": {},
             "isRoot": false,
-            "uuid": "ec8d9e41-3e92-47b0-b008-081594ef6c44",
+            "uuid": "e265a298-0d49-4d43-88ab-d5bc2bed31aa",
             "isHook": false,
             "skipped": false
           },
@@ -90,31 +88,32 @@
             "title": "put keyword in search box and click search button",
             "fullTitle": "Google search automated testing put keyword in search box and click search button",
             "timedOut": false,
-            "duration": 15021,
+            "duration": 138,
             "state": "failed",
             "pass": false,
             "fail": true,
             "pending": false,
-            "code": "const result = await page.submitKeywordAndGetResult();\nexpect(result.length).to.be.above(10);",
+            "code": "const result = await page.submitKeywordAndGetResult();\nconsole.log(\"result is...\", result);\nexpect(result.length).to.be.above(10);",
             "err": {
-              "message": "TimeoutError: Looking for element by NAME\nWait timed out after 15004ms",
-              "estack": "TimeoutError: Looking for element by NAME\nWait timed out after 15004ms\n    at /Users/tliu/dev/br/toy/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+              "message": "WebDriverError: element not visible\n  (Session info: chrome=77.0.3865.120)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)",
+              "estack": "WebDriverError: element not visible\n  (Session info: chrome=77.0.3865.120)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)\n    at Object.checkLegacyResponse (node_modules/selenium-webdriver/lib/error.js:585:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:533:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:468:26)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
             },
             "isRoot": false,
-            "uuid": "01488660-4ae5-4015-aac4-6cacdc17d89c",
+            "uuid": "9bd83775-61e0-45a2-b84f-0679c2867f80",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
+        "passes": [
+          "e265a298-0d49-4d43-88ab-d5bc2bed31aa"
+        ],
         "failures": [
-          "ec8d9e41-3e92-47b0-b008-081594ef6c44",
-          "01488660-4ae5-4015-aac4-6cacdc17d89c"
+          "9bd83775-61e0-45a2-b84f-0679c2867f80"
         ],
         "pending": [],
         "skipped": [],
-        "duration": 30043,
+        "duration": 198,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000

@@ -26,17 +26,19 @@ process.on('unhandledRejection', () => {});
 
             it ('find the input box and google search button', async () => {
                 const result = await page.findInputAndButton();
+                // console.log("result is...", result);
                 expect(result.inputEnabled).to.equal(true);
                 expect(result.buttonText).to.include('Google');
             });
 
             it ('put keyword in search box and click search button', async () => {
                 const result = await page.submitKeywordAndGetResult();
+                console.log("result is...", result);
                 expect(result.length).to.be.above(10);
             });
         });
     } catch (ex) {
-        console.log (new Error(ex.message));
+        console.error (new Error(ex.message));
     } finally {
 
     }
